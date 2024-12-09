@@ -501,7 +501,8 @@
                     'Ерофей',
                 ]
 
-                name = document.getElementById('names').value.split(',')
+                if (document.getElementById('names').value)
+                    name = document.getElementById('names').value.split(',')
 
                 console.log(name)
 
