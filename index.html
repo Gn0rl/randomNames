@@ -7,6 +7,9 @@
     </head>
     <body>
         <p id="p"></p>
+
+        <p>Имена передовать через , без пробелов</p>
+        <input id="names" />
         <button onclick="buttonGenerate()">Generate</button>
         <script>
             function createProbabilityTable(data) {
@@ -497,6 +500,11 @@
                     'Герасим',
                     'Ерофей',
                 ]
+
+                name = document.getElementById('names').value.split(',')
+
+                console.log(name)
+
                 var elem = document.getElementById('p')
                 elem.innerHTML = generateRandomName(name, ['ь', 'ъ', 'ы', 'й'])
             }
